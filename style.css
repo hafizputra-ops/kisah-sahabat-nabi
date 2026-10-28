@@ -1,0 +1,448 @@
+:root {
+  --primary: #ebdcc6;
+  --bg: #f6f1e7;
+  --text-color: #000000;
+  --navbar-bg: rgba(248, 160, 29, 0.8);
+}
+
+body.dark-mode {
+  --primary: #3a3a3a;
+  --bg: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-text: #d1d5db;
+  --navbar-bg: rgba(20, 20, 20, 0.95);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--navbar-bg);
+  border-bottom: 3px solid #064d1b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #064d1b;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #064d1b;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #064d1b;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #064d1b;
+}
+
+.hero-beranda {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("img/Beranda_Cover1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-beranda::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 28%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(246, 241, 231, 1) 8%,
+    rgba(246, 241, 231, 0) 50%
+  );
+}
+
+.hero-beranda .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero-beranda .content h1 {
+  font-size: 5em;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+
+.hero-beranda .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-beranda .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: #f8a01dcc;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-daftarkisah {
+  padding: 8rem 7%;
+}
+
+.hero-daftarkisah .content h1 {
+  font-size: 2em;
+  color: #064d1b;
+  line-height: 1;
+}
+
+.hero-daftarkisah .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #064d1b;
+}
+
+.kisahfavorit {
+  padding: 2rem 7% 4rem;
+}
+
+.kisahfavorit h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: #064d1b;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.kisahfavorit-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.kisahfavorit-card {
+  background-color: #fffdf8;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.kisahfavorit .kisahfavorit-card .cta {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #f8a01dcc;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.kisahfavorit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.kisahfavorit-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f8a01d;
+  margin-bottom: 1rem;
+}
+
+.kisahfavorit-card h3 {
+  font-size: 1.2rem;
+  color: #064d1b;
+  margin-bottom: 0.5rem;
+}
+
+.kisahfavorit-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  min-height: 2.8em;
+}
+
+.kisahfavorit-card a {
+  color: #f8a01d;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.kisahfavorit-card a:hover {
+  color: #064d1b;
+}
+
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #ffffff;
+  width: 18rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #064d1b;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s ease;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #333333;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+  color: #064d1b;
+  display: flex;
+  align-items: center;
+}
+
+#pesan-kosong {
+  display: none;
+  text-align: center;
+  color: #4b5563;
+  margin-top: 2rem;
+}
+
+.hero-daftarkisah {
+  padding-bottom: 2rem;
+}
+
+.daftarkisah {
+  padding: 1rem 7% 4rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.daftarkisah-item {
+  background-color: #fffdf8;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.daftarkisah .daftarkisah-item .cta {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #f8a01dcc;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.daftarkisah-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.daftarkisah-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fffdf8;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.daftarkisah-item img {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 3px solid #f8a01d;
+}
+
+.daftarkisah-info {
+  flex: 1;
+}
+
+.daftarkisah-item h3 {
+  font-size: 1.2rem;
+  color: #064d1b;
+  margin-bottom: 0.3rem;
+}
+
+.daftarkisah-item p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 0.8rem;
+}
+
+.daftarkisah-item a {
+  color: #f8a01d;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.daftarkisah-item a:hover {
+  color: #064d1b;
+}
+
+body.dark-mode .kisahfavorit-card,
+body.dark-mode .daftarkisah-item {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+body.dark-mode .kisahfavorit-card p,
+body.dark-mode .daftarkisah-item p {
+  color: var(--card-text);
+}
+
+body.dark-mode .kisahfavorit-card h3,
+body.dark-mode .daftarkisah-item h3,
+body.dark-mode .kisahfavorit h2,
+body.dark-mode .hero-daftarkisah .content h1,
+body.dark-mode .hero-daftarkisah .content p {
+  color: #4ade80;
+}
+
+body.dark-mode .hero-beranda::after {
+  background: linear-gradient(0deg, var(--bg) 8%, rgba(246, 241, 231, 0) 50%);
+}
+
+.navbar,
+.kisahfavorit-card,
+.daftarkisah-item,
+.search-form {
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+body.dark-mode .navbar {
+  border-bottom-color: #4ade80;
+}
+
+body.dark-mode .navbar .navbar-logo span,
+body.dark-mode .navbar .navbar-nav a:hover,
+body.dark-mode .navbar .navbar-extra a:hover {
+  color: #4ade80;
+}
+
+body.dark-mode .navbar .navbar-nav a::after {
+  border-bottom-color: #4ade80;
+}
+
+body.dark-mode .navbar .search-form {
+  background-color: var(--card-bg);
+  border-color: #4ade80;
+}
+
+body.dark-mode .navbar .search-form input {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar .search-form label {
+  color: #4ade80;
+}
+
+body.dark-mode #pesan-kosong {
+  color: var(--card-text);
+}
+
+body.dark-mode .kisahfavorit-card a:not(.cta):hover,
+body.dark-mode .daftarkisah-item a:not(.cta):hover {
+  color: #4ade80;
+}

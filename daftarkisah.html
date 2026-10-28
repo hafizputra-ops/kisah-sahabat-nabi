@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Kisah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html#beranda" class="navbar-logo"
+        >Kisah Para <span>Sahabat Nabi</span>.</a
+      >
+
+      <div class="navbar-nav">
+        <a href="index.html#beranda">Beranda</a>
+        <a href="index.html#kisahfavorit">Kisah Favorit</a>
+        <a href="daftarkisah.html">Daftar Kisah</a>
+        <a href="tentang.html">Tentang</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="star"><i data-feather="star"></i></a>
+        <a href="#" id="sun"><i data-feather="sun"></i></a>
+      </div>
+
+      <div class="search-form">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Cari kisah sahabat..."
+        />
+        <label for="search-input"><i data-feather="search"></i></label>
+      </div>
+    </nav>
+
+    <section class="hero-daftarkisah" id="daftar-kisah">
+      <main class="content">
+        <h1>Daftar Kisah Para Sahabat Rasulullah</h1>
+        <p>
+          Yuk, kenalan dengan para sahabat Rasulullah ﷺ. Pilih satu kisah dan
+          temukan pelajaran hidup yang relevan sampai sekarang.
+        </p>
+      </main>
+    </section>
+
+    <section class="daftarkisah" id="daftar-kisah">
+      <div class="daftarkisah-item">
+        <img src="img/abubakar.jpeg" alt="Abu Bakar Ash-Shiddiq" />
+        <div class="daftarkisah-info">
+          <h3>Abu Bakar Ash-Shiddiq</h3>
+          <p>
+            Sahabat pertama yang memeluk Islam dan teman setia Rasulullah ﷺ
+            dalam hijrah.
+          </p>
+          <a href="kisahabubakar.html" class="cta">Lihat Kisah</a>
+        </div>
+      </div>
+
+      <div class="daftarkisah-item">
+        <img src="img/umar.jpeg" alt="Umar bin Khattab" />
+        <div class="daftarkisah-info">
+          <h3>Umar bin Khattab</h3>
+          <p>Sosok pemimpin yang tegas dan adil dalam memimpin umat.</p>
+          <a href="#umar" class="cta">Lihat Kisah</a>
+        </div>
+      </div>
+
+      <div class="daftarkisah-item">
+        <img src="img/usman.jpeg" alt="Utsman bin Affan" />
+        <div class="daftarkisah-info">
+          <h3>Utsman bin Affan</h3>
+          <p>Dermawan dan penjaga persatuan.</p>
+          <a href="#utsman" class="cta">Lihat Kisah</a>
+        </div>
+      </div>
+
+        <div class="daftarkisah-item ">
+        <img src="img/ali.jpeg" alt="Ali bin Abi Thalib" />
+        <div class="daftarkisah-info">
+          <h3>Ali bin Abi Thalib</h3>
+          <p>Pemberani dan penuh ilmu.</p>
+          <a href="#ali" class="cta">Lihat Kisah</a>
+        </div>
+      </div>
+    </div>
+
+      <p id="pesan-kosong">
+        Sahabat tidak ditemukan. Coba kata kunci lain, ya.
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
